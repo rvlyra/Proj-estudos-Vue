@@ -22,51 +22,14 @@
               <p>Seguem uma consulta de dados como exemplo para começar:</p>
               <p>{{ name }} {{ lastName}}</p>
             </div>
-            <div class="col-md-8 produtos">
-              <div class="card border-primary mb-3" style="max-width: 18rem">
-                <div class="card-header">{{product.title}}</div>
-                <div class="card-body text-primary ">
-                  <!-- <h5 class="card-title">Primary card title</h5> -->
-                  <p class="card-text">{{ product.description }}</p>
-
-                  <img
-                    v-bind:src="product.image"
-                    v-bind:alt="product.title"
-                    style="max-width: 250px"
-                  />
-                </div>
-              </div>
-
-              <div class="card border-primary mb-3" style="max-width: 18rem">
-                <div class="card-header">{{product2.title}}</div>
-                <div class="card-body text-primary ">
-                  <!-- <h5 class="card-title">Primary card title</h5> -->
-                  <p class="card-text">{{ product2.description }}</p>
-
-                  <img
-                    v-bind:src="product2.image"
-                    v-bind:alt="product2.title"
-                    style="max-width: 250px"
-                  />
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
 
         <script src="https://unpkg.com/vue@next"></script>
         <script src="./app.js"></script>
 
-        <script
-          src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-          crossorigin="anonymous"
-        ></script>
-        <script
-          src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-          integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-          crossorigin="anonymous"
-        ></script>
+       
       </body>
     </html>
   </head>
