@@ -1,0 +1,115 @@
+            <!DOCTYPE html>
+            <html lang="en">
+              <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>VueJs 3 - Aula 06</title>
+        
+                <link rel="stylesheet" href="style.css">
+        
+                <link
+                  rel="stylesheet"
+                  href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+                  integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+                  crossorigin="anonymous"
+                />
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+              </head>
+              <body>
+                <div class="container">
+                  <div id="app">
+
+                    <div :style="styles">
+
+                      <div class="hd">
+                        <h1>{{ title }}</h1>
+                        <p>Olá, {{ fullName }}</p>
+                        <div class="cart">
+                          Carrinho ({{ cart.length }})
+                        </div>
+
+                        <label for="Dark">
+                          <input type="checkbox" :checked="dark" @click="toggleTheme" name="dark" id="dark">Tema Escuro
+                        </label>
+
+                        </div>  
+    
+    
+                        <hr>
+            
+                       
+            
+                        <ul class="col-md-12 produtos">
+                          <li class="card-products" v-for="(product, index) in products" :key="index">
+                            <h1 class="tl-film">{{ product.title }}</h1>
+                              <img :src="product.image" :alt="product.title">
+                              
+                              <strong class="tl-stars" v-if="product.stars > 0">
+                                {{ product.stars }}
+                              </strong>
+                              
+                              <a 
+                              href="#" 
+                              @click.prevent="addCart(product)"
+                              v-if="!inCart(product)"
+                              class="btn btn-primary">
+                              Adicionar ao Carrinho
+                              </a>
+                              <a 
+                              class="btn btn-primary"
+                              href="#" 
+                              @click.prevent="removeCart(product)"
+                              v-else                         
+                              >
+                              Remover do Carrinho
+                            </a>
+                            
+                          </li>
+                        </ul>
+                        
+
+                        <h5> {{ digiTitle }} </h5>    
+
+                    </div>
+                    
+                   
+                  </div>
+                </div>
+        
+                <script src="https://unpkg.com/vue@next"></script>
+                <script src="./app.js"></script>
+
+                <script>
+
+                  function tWrite(el) {
+                    const textArray = el.innerHTML.split('')
+                    el.innerHTML = ''
+                    textArray.forEach((letter, index) => {
+                      setTimeout(() =>  el.innerHTML += letter, 75 * index)
+                    })
+                  }
+
+                  const dgTitle = document.querySelector('h5')
+                  tWrite(dgTitle)
+                </script>
+        
+                <script
+                  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                  crossorigin="anonymous"
+                ></script>
+                <script
+                  src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+                  integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+                  crossorigin="anonymous"
+                ></script>
+
+
+               
+
+              </body>
+            </html>
+          </head>
+        </html>
+        
