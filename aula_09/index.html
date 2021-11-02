@@ -29,9 +29,11 @@
                           Carrinho ({{ cart.length }})
                         </div>
 
-                        <label for="Dark">
-                          <input type="checkbox" :checked="dark" @click="toggleTheme" name="dark" id="dark">Tema Escuro
+                        <div class="form-check form-switch">
+                        <label class="form-check-label" for="Dark">
+                          <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" :checked="dark" @click="toggleTheme" name="dark" id="dark">Tema Escuro
                         </label>
+                      </div>
 
                         </div>  
     
