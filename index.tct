@@ -92,3 +92,29 @@
 
 
 
+ <div class="col-md-8 produtos">
+                      
+                      <div class="card-products" v-for="(product, id) in products" :key="id">
+                        <h2>{{ product.title }}</h2>
+                          <img :src="product.image" :alt="product.title">
+                          
+                          <strong v-if="product.stars > 0">
+                            {{ product.stars }}
+                          </strong>
+                          <a 
+                          href="#" 
+                          v-if="inCart(produtcs)"
+                          @click.prevent="removeCart()"
+                          class="btn btn-primary">
+                          Remover do Carrinho
+                        </a>
+                        <a 
+                          href="#" 
+                          v-on:click.prevent="addCart()"
+                          v-else
+                          class="btn btn-primary">
+                          Adicionar ao Carrinho
+                        </a>
+                      </div>
+                      
+                    </div>
