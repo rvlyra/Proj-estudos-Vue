@@ -35,6 +35,7 @@
                     style="max-width: 250px"
                   />
                 </div>
+                <strong v-if="product.stars > 0">{{ product.stars }}</strong>
               </div>
 
               <div class="card border-primary mb-3" style="max-width: 18rem">
@@ -49,6 +50,7 @@
                     style="max-width: 250px"
                   />
                 </div>
+                <strong v-if="product2.stars > 0" >{{ product2.stars }}</strong>
               </div>
             </div>
           </div>

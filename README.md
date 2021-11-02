@@ -4,8 +4,12 @@ O projeto não contém uma aplicação específica. As pastas guardam exercício
 
 ### 01 - Setup Vue
 
+<<<<<<< HEAD
     free 01 - Ferramentas Para o Curso de Vue 3
 
+=======
+    free 01 - Ferramentas Para o Curso de Vue 3 
+>>>>>>> cd61bc8785aea8441f969d15353488320e4117b4
 ### 02 - Basic
 
     free 02 - Criar APP Vue 3
@@ -30,4 +34,8 @@ O projeto não contém uma aplicação específica. As pastas guardam exercício
 
     free 12 - Eventos no Vue 3 (comunicação entre componentes)
 
+<<<<<<< HEAD
     free 13 - Formulários no Vue 3
+=======
+    free 13 - Formulários no Vue 3 
+>>>>>>> cd61bc8785aea8441f969d15353488320e4117b4
