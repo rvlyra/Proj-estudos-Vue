@@ -51,22 +51,16 @@
                                 {{ product.stars }}
                               </strong>
                               
-                              <a 
-                              href="#" 
-                              @click.prevent="addCart(product)"
-                              v-if="!inCart(product)"
-                              class="btn btn-primary"
-                              :disabled="inCart(product)">
-                              Adicionar ao Carrinho
-                              </a>
-                              <a 
-                              class="btn btn-primary"
-                              href="#" 
-                              @click.prevent="removeCart(product)"
-                              v-else                         
+                              <button 
+                              @click.prevent="addCart(product)"                              
+                              :disabled="inCart(product)"
+                              class="['btn-normal', {'btn-disable' : inCart(product)}]"
                               >
-                              Remover do Carrinho
-                            </a>
+
+                              Adicionar
+
+                              </button>
+                              
                             
                           </li>
                         </ul>

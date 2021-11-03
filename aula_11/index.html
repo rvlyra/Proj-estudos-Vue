@@ -44,34 +44,13 @@
             
                         <ul class="col-md-12 produtos">
                           <li class="card-products" v-for="(product, index) in products" :key="index">
-                            <h1 class="tl-film">{{ product.title }}</h1>
-                              <img :src="product.image" :alt="product.title">
-                              
-                              <strong class="tl-stars" v-if="product.stars > 0">
-                                {{ product.stars }}
-                              </strong>
-                              
-                              <a 
-                              href="#" 
-                              @click.prevent="addCart(product)"
-                              v-if="!inCart(product)"
-                              class="btn btn-primary"
-                              :disabled="inCart(product)">
-                              Adicionar ao Carrinho
-                              </a>
-                              <a 
-                              class="btn btn-primary"
-                              href="#" 
-                              @click.prevent="removeCart(product)"
-                              v-else                         
-                              >
-                              Remover do Carrinho
-                            </a>
-                            
+                            <product-detail 
+                              :product="product"
+                              :product-in-cart="inCart">
+                            </product-detail>
                           </li>
                         </ul>
                         
-
                         <h5> {{ digiTitle }} </h5>    
 
                     </div>
